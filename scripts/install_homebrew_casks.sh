@@ -24,6 +24,7 @@ cask_packages=(
   signal
   spotify
   tableplus
+  transmit
   visual-studio-code
   viz
 )
