@@ -22,6 +22,7 @@ cli_packages=(
   jq
   libpq
   librsvg
+  mas
   mysql-client
   nmap
   oha

@@ -17,6 +17,7 @@ print_log "Starting Oh My Custom Zsh bootstrap..."
 ./scripts/install_oh_my_zsh_themes.sh
 ./scripts/install_homebrew_packages.sh
 ./scripts/install_homebrew_casks.sh
+./scripts/install_mas_apps.sh
 ./scripts/configure_dnsmasq.sh
 ./scripts/run_duti.sh
 ./scripts/install_node.sh
