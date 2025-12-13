@@ -1,0 +1,21 @@
+[mergetool]
+  keepBackup = true
+  prompt = false
+[core]
+  editor = code --wait
+  excludesfile = ~/.gitignore_global
+  autocrlf = input
+[init]
+  defaultBranch = main
+[web]
+  browser = edge
+[diff]
+  ignoreSubmodules = dirty
+[pull]
+  ff = only
+[includeIf "gitdir:~/Workspace/GitHub.com/"]
+  path = ~/.oh-my-custom-zsh/includes/git/.gitconfig_github_com
+[includeIf "gitdir:~/.oh-my-custom-zsh/"]
+  path = ~/.oh-my-custom-zsh/includes/git/.gitconfig_github_com
+[includeIf "gitdir:~/Workspace/GitLab.com/"]
+  path = ~/.oh-my-custom-zsh/includes/git/.gitconfig_gitlab_com

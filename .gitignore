@@ -1,0 +1,11 @@
+# IDEs
+.vscode
+.idea
+
+# Plugins
+plugins/*
+!plugins/.gitkeep
+
+# Themes
+themes/*
+!themes/.gitkeep
