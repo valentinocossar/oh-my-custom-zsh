@@ -9,9 +9,6 @@ export GOPATH="$HOME/.go"
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
-# Google Cloud SDK
-export PATH="/opt/homebrew/share/google-cloud-sdk/bin:$PATH"
-
 # MySQL client
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
