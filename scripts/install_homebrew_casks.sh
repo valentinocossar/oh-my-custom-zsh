@@ -9,12 +9,12 @@ print_log "Installing Homebrew Cask formulae..."
 cask_packages=(
   1password
   alt-tab
-  beardedspice
   bruno
   docker
   iterm2
   jordanbaird-ice
   lm-studio
+  music-decoy
   pdf-squeezer
   pearcleaner
   protonvpn
