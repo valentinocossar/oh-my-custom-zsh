@@ -15,6 +15,7 @@ apps_ids=(
   409203825
   409201541
   1289583905
+  1549370672
   442168834
   1006087419
   747648890
@@ -32,6 +33,7 @@ apps_names=(
   "Numbers"
   "Pages"
   "Pixelmator Pro"
+  "Save to Raindrop.io"
   "SiteSucker"
   "SnippetsLab"
   "Telegram"
