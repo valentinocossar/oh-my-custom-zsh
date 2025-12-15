@@ -109,3 +109,7 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste accept-line)
 
 # Set zsh-interactive-cd case insensitive
 zic_case_insensitive='true'
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/valentino.cossar/.lmstudio/bin"
+# End of LM Studio CLI section
