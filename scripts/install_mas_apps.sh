@@ -7,22 +7,21 @@ source scripts/utils.sh
 
 print_log "Installing Mac App Store apps..."
 apps_ids=(
-  1365531024
-  1569813296
-  1462114288
-  1474276998
-  409183694
-  409203825
-  409201541
-  1289583905
-  1549370672
-  442168834
-  1006087419
-  747648890
-  425424353
-  1465707487
-  310633997
-  1451685025
+  1365531024 # 1Blocker
+  1569813296 # 1Password for Safari
+  1462114288 # Grammarly for Safari
+  1474276998 # HP
+  409183694 # Keynote
+  409203825 # Numbers
+  409201541 # Pages
+  1289583905 # Pixelmator Pro
+  1549370672 # Save to Raindrop.io
+  442168834 # SiteSucker
+  1006087419 # SnippetsLab
+  747648890 # Telegram
+  425424353 # The Unarchiver
+  310633997 # WhatsApp
+  1451685025 # WireGuard
 )
 apps_names=(
   "1Blocker"
@@ -38,7 +37,6 @@ apps_names=(
   "SnippetsLab"
   "Telegram"
   "The Unarchiver"
-  "Toast"
   "WhatsApp"
   "WireGuard"
 )
