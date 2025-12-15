@@ -22,3 +22,7 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/valentino.cossar/.lmstudio/bin"
+# End of LM Studio CLI section
