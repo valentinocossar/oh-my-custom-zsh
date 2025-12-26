@@ -11,6 +11,7 @@ apps_ids=(
   1569813296 # 1Password for Safari
   1462114288 # Grammarly for Safari
   1474276998 # HP
+  1533805339 # Keepa
   409183694 # Keynote
   409203825 # Numbers
   409201541 # Pages
@@ -28,6 +29,7 @@ apps_names=(
   "1Password for Safari"
   "Grammarly for Safari"
   "HP"
+  "Keepa"
   "Keynote"
   "Numbers"
   "Pages"
