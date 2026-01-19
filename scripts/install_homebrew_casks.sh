@@ -15,7 +15,6 @@ cask_packages=(
   jordanbaird-ice
   lm-studio
   music-decoy
-  pdf-squeezer
   pearcleaner
   protonvpn
   raycast
