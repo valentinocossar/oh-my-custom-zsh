@@ -59,9 +59,7 @@ plugins=(
   golang
   laravel
   macos
-  pyenv
   vscode
-  wp-cli
   z
   zsh-autosuggestions
   zsh-interactive-cd
@@ -111,5 +109,5 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste accept-line)
 zic_case_insensitive='true'
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/valentino.cossar/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section

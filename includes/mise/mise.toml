@@ -1,0 +1,21 @@
+[tools]
+ansible-core = { version = "2.20", uvx = "true", uvx_args = "--with ansible,passlib,bcrypt,jmespath,netaddr,cryptography" }
+go = "1.26"
+node = "24"
+opentofu = "1.11"
+php = "8.5"
+pipx = "1.8"
+"pipx:poetry" = "2.3"
+python = "3.14"
+uv = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = [
+  "node",
+  "python",
+  "go"
+]
+trusted_config_paths = [
+  "~/.oh-my-custom-zsh",
+  "~/Workspace"
+]

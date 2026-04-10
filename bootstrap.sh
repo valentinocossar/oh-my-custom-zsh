@@ -19,9 +19,9 @@ print_log "Starting Oh My Custom Zsh bootstrap..."
 ./scripts/install_homebrew_casks.sh
 ./scripts/install_mas_apps.sh
 ./scripts/configure_dnsmasq.sh
-./scripts/run_duti.sh
-./scripts/install_node.sh
+./scripts/run_utiluti.sh
+./scripts/setup_symlink_mise.sh
+./scripts/run_mise_install.sh
 ./scripts/install_composer_packages.sh
-./scripts/install_npm_packages.sh
 
 print_log "Bootstrap completed successfully! Please start a new terminal session to apply changes."

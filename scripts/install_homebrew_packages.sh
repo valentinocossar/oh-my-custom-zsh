@@ -7,30 +7,26 @@ source scripts/utils.sh
 
 print_log "Installing Homebrew CLI formulae..."
 cli_packages=(
+  shivammathur/php/php@8.4
+  shivammathur/php/php@8.5
   ack
-  ansible
   bat
   btop
   composer
   ctop
   dnsmasq
-  duti
-  fnm
   fzf
-  go
   httpie
   jq
   libpq
   librsvg
+  llmfit
   mas
+  mise
   mysql-client
   nmap
   oha
-  opentofu
-  php@8.5
-  poetry
   pwgen
-  pyenv
   testssl
   tlrc
   trash
