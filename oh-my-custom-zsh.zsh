@@ -21,7 +21,7 @@ alias gcs="git checkout staging"
 # ssh-agent
 alias sshls="ssh-add -L"
 alias sshdl="ssh-add -D"
-alias sshad="ssh-add --apple-use-keychain ~/.ssh/id_rsa ~/.ssh/id_ed25519 ~/.ssh/id_ed25519_personal"
+alias sshad="ssh-add --apple-use-keychain ~/.ssh/id_ed25519"
 
 # Oh My Zsh and Oh My Custom Zsh
 alias ohmyzsh="cd ~/.oh-my-zsh"
