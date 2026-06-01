@@ -12,9 +12,9 @@ cask_packages=(
   bruno
   docker
   iterm2
-  jordanbaird-ice
   lm-studio
   music-decoy
+  pdf-squeezer
   pearcleaner
   protonvpn
   raycast
@@ -23,6 +23,7 @@ cask_packages=(
   signal
   spotify
   tableplus
+  thaw
   transmit
   visual-studio-code
   viz

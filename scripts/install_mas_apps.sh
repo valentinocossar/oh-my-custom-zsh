@@ -12,9 +12,9 @@ apps_ids=(
   1462114288 # Grammarly for Safari
   1474276998 # HP
   1533805339 # Keepa
-  409183694 # Keynote
-  409203825 # Numbers
-  409201541 # Pages
+  361285480 # Keynote
+  361304891 # Numbers
+  361309726 # Pages
   1289583905 # Pixelmator Pro
   1549370672 # Save to Raindrop.io
   442168834 # SiteSucker

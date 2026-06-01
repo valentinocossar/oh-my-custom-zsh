@@ -19,3 +19,6 @@ trusted_config_paths = [
   "~/.oh-my-custom-zsh",
   "~/Workspace"
 ]
+
+[env]
+COMPOSER_HOME = "{{ env.HOME }}/.composer"
