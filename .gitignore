@@ -9,3 +9,4 @@ plugins/*
 # Themes
 themes/*
 !themes/.gitkeep
+.tokensave

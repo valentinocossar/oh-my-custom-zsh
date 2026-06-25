@@ -10,6 +10,7 @@ cask_packages=(
   1password
   alt-tab
   bruno
+  claude
   docker
   iterm2
   lm-studio
