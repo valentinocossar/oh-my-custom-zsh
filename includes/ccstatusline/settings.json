@@ -1,0 +1,103 @@
+{
+  "version": 3,
+  "lines": [
+    [
+      {
+        "id": "1",
+        "type": "model",
+        "color": "brightMagenta"
+      },
+      {
+        "id": "2",
+        "type": "separator"
+      },
+      {
+        "id": "3",
+        "type": "context-bar",
+        "color": "brightBlue"
+      },
+      {
+        "id": "4",
+        "type": "separator"
+      },
+      {
+        "id": "5",
+        "type": "git-branch",
+        "color": "green"
+      },
+      {
+        "id": "6",
+        "type": "separator"
+      },
+      {
+        "id": "7",
+        "type": "git-changes",
+        "color": "cyan"
+      }
+    ],
+    [
+      {
+        "id": "1f342d6b-3709-44c6-bc62-f4b5aa780cdb",
+        "type": "session-usage",
+        "color": "brightGreen",
+        "metadata": {
+          "display": "progress-short"
+        }
+      },
+      {
+        "id": "f338897f-488e-4447-95c5-9bd28f57a27e",
+        "type": "separator"
+      },
+      {
+        "id": "8a11675b-037a-4d44-90f4-7f6683419596",
+        "type": "reset-timer",
+        "color": "brightCyan",
+        "metadata": {
+          "display": "time"
+        }
+      },
+      {
+        "id": "c4c9a388-eca8-4a24-8166-1ef877c87d8f",
+        "type": "separator"
+      },
+      {
+        "id": "4535fff7-d5a5-4954-b051-2abadc32e9ae",
+        "type": "weekly-usage",
+        "color": "blue",
+        "metadata": {
+          "display": "progress-short"
+        }
+      },
+      {
+        "id": "c80ee977-5c27-43ee-ade0-e4d7eebae6c7",
+        "type": "separator"
+      },
+      {
+        "id": "74176d29-a15e-444f-a4a9-b3f3e1d90b1c",
+        "type": "weekly-reset-timer",
+        "color": "yellow"
+      }
+    ],
+    []
+  ],
+  "flexMode": "full-minus-40",
+  "compactThreshold": 60,
+  "colorLevel": 2,
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "gitCacheTtlSeconds": 5,
+  "minimalistMode": false,
+  "powerline": {
+    "enabled": false,
+    "separators": [""],
+    "separatorInvertBackground": [false],
+    "startCaps": [],
+    "endCaps": [],
+    "autoAlign": false,
+    "continueThemeAcrossLines": false
+  },
+  "installation": {
+    "method": "pinned",
+    "installedVersion": "2.2.22"
+  }
+}

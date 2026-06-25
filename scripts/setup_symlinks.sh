@@ -47,3 +47,9 @@ ln -sf "$HOME/.oh-my-custom-zsh/includes/mise/mise.toml" "$HOME/.config/mise/con
 print_log "Creating symbolic link for .default-npm-packages..."
 rm -f "$HOME/.default-npm-packages"
 ln -sf $HOME/.oh-my-custom-zsh/includes/node/.default-npm-packages $HOME/.default-npm-packages
+
+# Create ccstatusline/settings.json symbolic link
+print_log "Creating symbolic link for ccstatusline/settings.json..."
+mkdir -p "$HOME/.config/ccstatusline"
+rm -f "$HOME/.config/ccstatusline/settings.json"
+ln -sf "$HOME/.oh-my-custom-zsh/includes/ccstatusline/settings.json" "$HOME/.config/ccstatusline/settings.json"
