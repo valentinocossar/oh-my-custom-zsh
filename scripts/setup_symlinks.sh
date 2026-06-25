@@ -46,4 +46,4 @@ ln -sf "$HOME/.oh-my-custom-zsh/includes/mise/mise.toml" "$HOME/.config/mise/con
 #  Create .default-npm-packages symbolic link
 print_log "Creating symbolic link for .default-npm-packages..."
 rm -f "$HOME/.default-npm-packages"
-ln -sf $HOME/.oh-my-custom-zsh/node/.default-npm-packages $HOME/.default-npm-packages
+ln -sf $HOME/.oh-my-custom-zsh/includes/node/.default-npm-packages $HOME/.default-npm-packages
