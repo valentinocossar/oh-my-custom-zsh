@@ -12,6 +12,7 @@ cask_packages=(
   bruno
   claude
   docker
+  firefox
   iterm2
   lm-studio
   music-decoy
