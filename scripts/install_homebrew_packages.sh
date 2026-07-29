@@ -34,6 +34,7 @@ cli_packages=(
   tlrc
   trash
   tree
+  utiluti
   watch
   wget
 )
