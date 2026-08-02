@@ -14,7 +14,6 @@ cli_packages=(
   bat
   btop
   composer
-  claude-code
   ctop
   dnsmasq
   fzf

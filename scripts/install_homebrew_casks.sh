@@ -11,6 +11,7 @@ cask_packages=(
   alt-tab
   bruno
   claude
+  claude-code@latest
   docker
   firefox
   iterm2
