@@ -8,6 +8,7 @@ source scripts/utils.sh
 print_log "Installing Homebrew Cask formulae..."
 cask_packages=(
   1password
+  1password-cli
   alt-tab
   bruno
   claude
