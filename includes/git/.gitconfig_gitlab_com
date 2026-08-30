@@ -1,0 +1,6 @@
+[user]
+  name = Valentino Cossar
+  email = 32299812-valentinocossar@users.noreply.gitlab.com
+  username = valentinocossar
+[core]
+  sshCommand = ssh -i ~/.ssh/id_ed25519 -F /dev/null

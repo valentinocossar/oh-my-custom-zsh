@@ -1,0 +1,30 @@
+[mergetool]
+  keepBackup = true
+  prompt = false
+
+[core]
+  editor = code --wait
+  excludesfile = ~/.gitignore_global
+  autocrlf = input
+  pager = delta
+
+[init]
+  defaultBranch = main
+
+[interactive]
+  diffFilter = delta --color-only
+
+[diff]
+  ignoreSubmodules = dirty
+
+[pull]
+  ff = only
+
+[delta]
+  navigate = true
+  light = false
+  side-by-side = true
+  line-numbers = true
+
+[include]
+  path = ~/.oh-my-custom-zsh/includes/git/.gitconfig_identities

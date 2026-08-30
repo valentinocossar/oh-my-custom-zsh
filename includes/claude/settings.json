@@ -1,0 +1,47 @@
+{
+  "cleanupPeriodDays": 90,
+  "permissions": {
+    "ask": [
+      "Read(~/.ssh/**)",
+      "Read(~/.claude/.credentials.json)",
+      "Read(**/.env)",
+      "Read(**/.env.*)"
+    ],
+    "defaultMode": "auto"
+  },
+  "model": "sonnet",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "ccstatusline",
+    "padding": 0,
+    "refreshInterval": 10
+  },
+  "enabledPlugins": {
+    "grill-me@claude-code-skills": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-code-skills": {
+      "source": {
+        "source": "github",
+        "repo": "alirezarezvani/claude-skills"
+      }
+    }
+  },
+  "theme": "dark-ansi",
+  "remoteControlAtStartup": true,
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true
+}

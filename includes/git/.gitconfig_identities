@@ -1,0 +1,12 @@
+# Public gitplatforms
+# Use `host:**/**`, not `host:**`
+
+[includeIf "hasconfig:remote.*.url:git@github.com:**/**"]
+  path = ~/.oh-my-custom-zsh/includes/git/.gitconfig_github_com
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
+  path = ~/.oh-my-custom-zsh/includes/git/.gitconfig_github_com
+
+[includeIf "hasconfig:remote.*.url:git@gitlab.com:**/**"]
+  path = ~/.oh-my-custom-zsh/includes/git/.gitconfig_gitlab_com
+[includeIf "hasconfig:remote.*.url:https://gitlab.com/**"]
+  path = ~/.oh-my-custom-zsh/includes/git/.gitconfig_gitlab_com

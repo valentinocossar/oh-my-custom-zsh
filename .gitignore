@@ -1,0 +1,13 @@
+# System
+.DS_Store
+
+# Plugins
+plugins/*
+!plugins/.gitkeep
+
+# Themes
+themes/*
+!themes/.gitkeep
+
+# Tokensave
+.tokensave
