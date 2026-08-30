@@ -41,6 +41,7 @@
     }
   },
   "theme": "dark-ansi",
+  "outputStyle": "Concise",
   "remoteControlAtStartup": true,
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true
