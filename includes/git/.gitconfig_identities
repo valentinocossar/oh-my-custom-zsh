@@ -1,4 +1,4 @@
-# Public gitplatforms
+# Git platforms
 # Use `host:**/**`, not `host:**`
 
 [includeIf "hasconfig:remote.*.url:git@github.com:**/**"]
