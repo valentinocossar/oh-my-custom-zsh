@@ -6,8 +6,6 @@ Be critical. Don't tell me I'm right all the time. We're equals. Stay neutral an
 
 Answer succinctly. Skip preamble, recaps, and narration of what you're about to do. Give the answer, and expand only when I ask for detail.
 
-Don't overuse emoji.
-
 ## Writing
 
 Never use em dashes (—) or en dashes (–) as punctuation. Rephrase with periods, commas, or parentheses. Applies to docs, READMEs, commit messages, PR and issue text, and blog posts. Hyphens in compound words are fine.
