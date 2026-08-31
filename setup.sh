@@ -25,9 +25,6 @@ print_step "Starting Oh My Custom Zsh setup..."
 ./scripts/run_mise_install.sh
 ./scripts/install_composer_packages.sh
 ./scripts/install_claude_plugins.sh
-
-# Cosmetic system tweaks, kept last so a declined prompt or missing sudo can't
-# abort the steps above
 ./scripts/set_macos_defaults.sh || true
 
 print_success "Setup completed successfully! Please start a new terminal session to apply changes."
