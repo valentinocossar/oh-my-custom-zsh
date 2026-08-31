@@ -67,8 +67,6 @@ rm -f "$HOME/.config/ccstatusline/settings.json"
 ln -sf "$HOME/.oh-my-custom-zsh/includes/ccstatusline/settings.json" "$HOME/.config/ccstatusline/settings.json"
 
 # Create Claude config symbolic links
-# RTK.md is intentionally excluded — it is managed by the rtk tool itself and
-# only referenced from CLAUDE.md via `@RTK.md`.
 print_log "Creating symbolic links for Claude config..."
 mkdir -p "$HOME/.claude"
 for f in CLAUDE.md settings.json; do
