@@ -5,24 +5,24 @@ set -e
 # Source utility functions
 source scripts/utils.sh
 
+# Define Oh My Zsh plugins (format: "<name> <repository url>")
+plugins=(
+  "vscode https://github.com/valentinocossar/vscode"
+  "zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions"
+  "zsh-syntax-highlighting https://github.com/zsh-users/zsh-syntax-highlighting"
+)
+
 # Install Oh My Zsh plugins
 print_step "Installing Oh My Zsh plugins..."
-if [ ! -d "$HOME/.oh-my-custom-zsh/plugins/vscode" ]; then
-  git clone https://github.com/valentinocossar/vscode "$HOME/.oh-my-custom-zsh/plugins/vscode"
-  print_log "Plugin vscode installed."
-else
-  print_log "Plugin vscode already installed."
-fi
-if [ ! -d "$HOME/.oh-my-custom-zsh/plugins/zsh-autosuggestions" ]; then
-  git clone https://github.com/zsh-users/zsh-autosuggestions "$HOME/.oh-my-custom-zsh/plugins/zsh-autosuggestions"
-  print_log "Plugin zsh-autosuggestions installed."
-else
-  print_log "Plugin zsh-autosuggestions already installed."
-fi
-if [ ! -d "$HOME/.oh-my-custom-zsh/plugins/zsh-syntax-highlighting" ]; then
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting "$HOME/.oh-my-custom-zsh/plugins/zsh-syntax-highlighting"
-  print_log "Plugin zsh-syntax-highlighting installed."
-else
-  print_log "Plugin zsh-syntax-highlighting already installed."
-fi
+for entry in "${plugins[@]}"; do
+  name="${entry%% *}"
+  url="${entry##* }"
+
+  if [ -d "$HOME/.oh-my-custom-zsh/plugins/$name" ]; then
+    print_log "Plugin $name already installed."
+  else
+    git clone "$url" "$HOME/.oh-my-custom-zsh/plugins/$name"
+    print_log "Plugin $name installed."
+  fi
+done
 print_success "Oh My Zsh plugins installed."
