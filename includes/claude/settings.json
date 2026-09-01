@@ -13,11 +13,49 @@
   "hooks": {
     "PreToolUse": [
       {
+        "matcher": "Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/homebrew/bin/tokensave",
+            "args": [
+              "hook-pre-tool-use"
+            ]
+          }
+        ]
+      },
+      {
         "matcher": "Bash",
         "hooks": [
           {
             "type": "command",
             "command": "rtk hook claude"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/homebrew/bin/tokensave",
+            "args": [
+              "hook-stop"
+            ]
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/homebrew/bin/tokensave",
+            "args": [
+              "hook-prompt-submit"
+            ]
           }
         ]
       }
@@ -40,9 +78,11 @@
       }
     }
   },
-  "theme": "dark-ansi",
   "outputStyle": "Concise",
+  "tui": "fullscreen",
+  "theme": "dark-ansi",
   "remoteControlAtStartup": true,
   "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true
 }
