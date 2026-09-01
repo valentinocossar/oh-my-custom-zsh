@@ -37,6 +37,10 @@ Comments are rare. A comment carries a *why* that isn't derivable from the varia
 - **jq** is installed. Use it for JSON processing in shell pipelines
 - **GNU parallel** is installed. Use it for concurrent shell tasks when beneficial
 
+## Shell aliases
+
+The Bash tool sources my interactive zsh aliases, so `mv` and `rm` really run `mv -vi` and `rm -vi`: they block on a confirmation prompt nobody can answer and time out. Run coreutils by absolute path (`/bin/mv`, `/bin/rm`, `/bin/cp`, `/bin/ln`) so no alias applies. The same holds for any alias I add later; they live in `includes/zsh/aliases.zsh` in my dotfiles repo, symlinked from `~/.zshrc`.
+
 ## GitHub
 
 Use the gh CLI for GitHub questions and operations.
