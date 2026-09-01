@@ -7,4 +7,4 @@ source scripts/utils.sh
 
 print_step "Creating .hushlogin..."
 touch "$HOME/.hushlogin"
-print_success ".hushlogin created."
+print_success "File .hushlogin created."
