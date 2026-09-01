@@ -5,6 +5,13 @@ set -e
 # Source utility functions
 source scripts/utils.sh
 
+# Check if command exists
+print_step "Checking for utiluti..."
+if ! command -v utiluti >/dev/null 2>&1; then
+  print_warn "Utiluti not installed, skipping file associations."
+  exit 0
+fi
+
 # UTI associations to set corresponding app bundle identifier
 # Format: "UTI bundle_identifier"
 uti_associations=(
