@@ -1,16 +1,16 @@
 {
   "cleanupPeriodDays": 90,
   "permissions": {
+    "allow": [
+      "mcp__tokensave__*"
+    ],
     "ask": [
       "Read(~/.ssh/**)",
       "Read(~/.claude/.credentials.json)",
       "Read(**/.env)",
       "Read(**/.env.*)"
     ],
-    "defaultMode": "auto",
-    "allow": [
-      "mcp__tokensave__*"
-    ]
+    "defaultMode": "auto"
   },
   "model": "sonnet",
   "hooks": {
