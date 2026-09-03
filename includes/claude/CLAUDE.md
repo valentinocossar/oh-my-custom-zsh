@@ -22,13 +22,21 @@ Do not apply word wrap to text (including Markdown files like this one) unless r
 
 Always use semantic commits (`feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, ...). No exceptions, including the very first commit of a repo.
 
+The subject line usually carries the whole message. A commit with no body at all is a good commit. Write one only when the *why* would otherwise be lost, and keep it to two or three lines.
+
 Never run `git commit` (or `git push`) without my explicit confirmation first, even when a task's implementation is otherwise complete.
 
 ## Comments
 
-Comments are rare. A comment carries a *why* that isn't derivable from the variable or task name: a hidden constraint, a workaround, or a non-obvious consequence. Never restate what a key or task already says. One line; if it needs more, it belongs in the PR description instead.
+Every comment is deliberate. It earns its place in one of two ways: it signposts a block so the reader grasps its purpose without reading through it, or it carries a *why* the code cannot state (a hidden constraint, a workaround, a non-obvious consequence, an opaque API).
 
-Write them as short fragments, not sentences: no full stop at the end, and prefer a phrasing that doesn't call for one.
+A signpost sits above a block, never above a single statement, and names what the block accomplishes, not how. If something right below already says it (a log string, a self-describing call), drop the comment, not the line. In application code, first ask whether the block wants to be a function instead: a name beats a signpost. Reach for the comment when extracting would cost more than it returns.
+
+Prefer one line. Longer is fine when the reason needs it: a usage block on a function people invoke by hand, a constraint that takes three lines to state honestly. What doesn't belong is narrative that should have gone in the PR description.
+
+Never copy into a comment what the code already states: a path, a name, a value, a count, a signature. It doubles the maintenance and the copy is the half that goes stale without anyone noticing. Anchor the comment to intent and name things by their role, not by a path or an identifier a rename would invalidate. Spell one out only when the comment stops making sense without it.
+
+One-liners are fragments, not sentences: no full stop at the end, and prefer a phrasing that doesn't call for one. A multi-line comment is prose and gets normal punctuation.
 
 ## Installed CLI tools
 

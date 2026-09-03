@@ -13,10 +13,6 @@ Two managers, split by how versions are handled:
 
 When a tool is present in both (e.g. `php`), Homebrew covers the keg-only build/library side and Mise-en-place provides the runtime version that is active on `PATH` for development (`mise activate` runs after `brew shellenv` in `.zshrc`).
 
-## Comments
-
-Don't name specific files or list file paths in a comment unless strictly necessary. It rots as soon as files move or get renamed; describe the role generically instead.
-
 ## Shell scripts
 
 Variable naming: lowercase with underscores for locals (`config_file`, `reply`). UPPER_SNAKE_CASE only for exported environment variables and file-level constants set once (`C_RESET`, `HOMEBREW_NO_AUTO_UPDATE`). Prefer `local` inside functions.
