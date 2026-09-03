@@ -28,6 +28,8 @@ Never run `git commit` (or `git push`) without my explicit confirmation first, e
 
 Comments are rare. A comment carries a *why* that isn't derivable from the variable or task name: a hidden constraint, a workaround, or a non-obvious consequence. Never restate what a key or task already says. One line; if it needs more, it belongs in the PR description instead.
 
+Write them as short fragments, not sentences: no full stop at the end, and prefer a phrasing that doesn't call for one.
+
 ## Installed CLI tools
 
 - **bun** is installed. Prefer it over `node`/`npm` for running scripts, installing packages, and executing JS/TS
