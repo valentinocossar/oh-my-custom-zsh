@@ -24,7 +24,7 @@ Always use semantic commits (`feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, ..
 
 The subject line usually carries the whole message. A commit with no body at all is a good commit. Write one only when the *why* would otherwise be lost, and keep it to two or three lines.
 
-Never run `git commit` (or `git push`) without my explicit confirmation first, even when a task's implementation is otherwise complete.
+Never run `git commit` (or `git push`, or open a PR or MR) without my explicit confirmation first, even when a task's implementation is otherwise complete.
 
 ## Comments
 
