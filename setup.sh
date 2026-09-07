@@ -26,5 +26,6 @@ print_step "Starting Oh My Custom Zsh setup..."
 ./scripts/install_composer_packages.sh
 ./scripts/install_claude_plugins.sh
 ./scripts/set_macos_defaults.sh || true
+./scripts/set_app_shortcuts.sh
 
 print_success "Setup completed successfully! Please start a new terminal session to apply changes."
