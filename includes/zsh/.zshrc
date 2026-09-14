@@ -108,10 +108,6 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste accept-line)
 # Set zsh-interactive-cd case insensitive
 zic_case_insensitive='true'
 
-# Homebrew
-export HOMEBREW_BUNDLE_FILE_GLOBAL="$HOME/.config/homebrew/Brewfile"
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # Zoxide
 eval "$(zoxide init zsh)"
 
