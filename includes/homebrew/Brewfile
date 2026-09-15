@@ -127,8 +127,6 @@ cask "signal"
 cask "spotify"
 # Native GUI tool for relational databases
 cask "tableplus"
-# Menu bar manager
-cask "thaw"
 # File transfer application
 cask "transmit"
 # Open-source code editor

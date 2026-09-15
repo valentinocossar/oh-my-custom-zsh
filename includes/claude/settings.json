@@ -11,7 +11,7 @@
       "Read(**/.env.*)",
       "Bash(git push *)",
       "Bash(git commit *)",
-      "Bash(gh pr create *)",
+      "Bash(gh pr create *)"
     ],
     "defaultMode": "auto"
   },
