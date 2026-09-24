@@ -20,3 +20,19 @@ Variable naming: lowercase with underscores for locals (`config_file`, `reply`).
 Put a new setting in `.zprofile` if a script would need it too, since that file runs once at login and everything it exports is inherited: environment variables, `PATH`, `brew shellenv`. Put it in `.zshrc` if it only makes sense while typing at the prompt, since that file runs for every interactive shell: theme, completions, aliases, keybindings, and hooks like `mise activate` and `zoxide init`. Oh My Zsh parameters (`ZSH_THEME`, `HIST_STAMPS`) are the exception and stay in `.zshrc`, because `oh-my-zsh.sh` reads them when it is sourced there.
 
 A script that depends on a tool the Brewfile step would have installed must guard on it and degrade to a `print_warn` plus `exit 0`, since that step is disabled here.
+
+## Autonomous execution
+
+Keep going when a step doesn't need my input. Put status notes in the same message as the next action.
+
+Stop only when blocked, or before an action that is destructive or hard to undo: deleting data, force-pushing or rewriting published history, changes outside the repo, anything that touches prod/production, and anything visible to others (commits, pushes, PRs and MRs, messages, comments). The global commit confirmation rule still applies.
+
+Don't ask "should I continue?" and don't list options that don't block you.
+
+## End-of-task report
+
+Close a multi-step task with these sections, in this order, omitting empty ones. This is the one place a recap is wanted:
+
+1. **Blocked on me**: decisions or actions you need from me
+2. **Changed**: what now works, files modified
+3. **Found**: problems or things noticed outside the scope
