@@ -49,6 +49,24 @@ Runtimes and their versions are declared in `includes/mise/mise.toml` (symlinked
 
 To bump everything at once, run `mise run bump`, a wrapper for `mise upgrade --bump` that skips `php` (a `mise link` to the Homebrew keg, which must not be rebuilt from source) and `node` (pinned to a major, moved by hand to the next LTS).
 
+## Backups
+
+### SSH keys
+
+Encrypt the whole `~/.ssh` folder into a desired location (prompts for a password twice):
+
+```bash
+tar -czf - -C ~ --exclude .ssh/agent .ssh | openssl enc -aes-256-cbc -salt -pbkdf2 -iter 600000 -out ~/path/to/ssh-backup.tar.gz.enc
+```
+
+Decrypt and restore it into `~` (overwrites files with the same name in `~/.ssh`):
+
+```bash
+openssl enc -d -aes-256-cbc -pbkdf2 -iter 600000 -in ~/path/to/ssh-backup.tar.gz.enc | tar -xzf - -C ~
+```
+
+Decryption must use the same cipher and `-iter` value. A wrong password fails with `bad decrypt`.
+
 ## Authors
 
 - [Valentino](https://github.com/valentinocossar)
