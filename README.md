@@ -49,6 +49,15 @@ Runtimes and their versions are declared in `includes/mise/mise.toml` (symlinked
 
 To bump everything at once, run `mise run bump`, a wrapper for `mise upgrade --bump` that skips `php` (a `mise link` to the Homebrew keg, which must not be rebuilt from source) and `node` (pinned to a major, moved by hand to the next LTS).
 
+### Upgrading PHP to a new minor
+
+Homebrew's `php` formula is rolling: when a new minor ships (e.g. 8.6), `brew upgrade` moves it there, while the previous minor becomes a separate `php@8.5` formula. To keep 8.5 available and switch to 8.6:
+
+1. Install the outgoing minor as its own keg: `brew install shivammathur/php/php@8.5`.
+2. Repoint the mise links to the new kegs: `./scripts/setup_symlink_mise.sh` (run it from the repo root).
+3. Set `php = "8.6"` in `includes/mise/mise.toml`.
+4. Regenerate the Brewfile with `brew bundle dump --global --force --taps --brews --casks`.
+
 ## Backups
 
 ### SSH keys
