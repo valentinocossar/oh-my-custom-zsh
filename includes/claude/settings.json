@@ -15,7 +15,7 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "sonnet",
+  "model": "opusplan",
   "hooks": {
     "PreToolUse": [
       {
@@ -28,6 +28,7 @@
         ]
       },
       {
+        "matcher": "Agent|Grep|Bash|Glob",
         "hooks": [
           {
             "type": "command",
@@ -36,8 +37,7 @@
               "hook-pre-tool-use"
             ]
           }
-        ],
-        "matcher": "Agent|Grep|Bash|Glob"
+        ]
       }
     ],
     "Stop": [
@@ -74,13 +74,20 @@
     "refreshInterval": 10
   },
   "enabledPlugins": {
-    "grill-me@claude-code-skills": true
+    "grill-me@claude-code-skills": true,
+    "impeccable@impeccable": true
   },
   "extraKnownMarketplaces": {
     "claude-code-skills": {
       "source": {
         "source": "github",
         "repo": "alirezarezvani/claude-skills"
+      }
+    },
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
       }
     }
   },
