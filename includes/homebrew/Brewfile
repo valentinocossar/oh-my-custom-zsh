@@ -1,4 +1,5 @@
 tap "aovestdipaperino/tap", trusted: true
+tap "lerd-env/lerd", trusted: true
 tap "rhettbull/osxphotos", "https://github.com/RhetTbull/homebrew-osxphotos", trusted: true
 tap "shivammathur/php", trusted: true
 # Search tool like grep, but optimized for programmers
@@ -75,6 +76,8 @@ brew "wget"
 brew "zoxide"
 # Code intelligence tool that builds semantic knowledge graphs from source code
 brew "aovestdipaperino/tap/tokensave"
+# Local Laravel development environment for Linux and macOS
+brew "lerd-env/lerd/lerd"
 # Export photos from Apple Photos app and query the Photos database
 brew "rhettbull/osxphotos/osxphotos"
 # General-purpose scripting language
