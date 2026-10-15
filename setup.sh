@@ -20,6 +20,7 @@ print_step "Starting Oh My Custom Zsh setup..."
 ./scripts/install_oh_my_zsh_themes.sh
 ./scripts/install_homebrew_bundle.sh
 ./scripts/configure_dnsmasq.sh
+./scripts/install_lerd_mono_watch.sh
 ./scripts/run_utiluti.sh
 ./scripts/setup_symlink_mise.sh
 ./scripts/run_mise_install.sh
