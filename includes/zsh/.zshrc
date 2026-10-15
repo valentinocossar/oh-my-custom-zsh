@@ -116,3 +116,10 @@ eval "$(mise activate zsh)"
 
 # Direnv
 eval "$(direnv hook zsh)"
+
+# Lerd
+export PATH="$HOME/.local/share/lerd/bin:$PATH"
+
+# Lerd completions
+fpath=($HOME/.local/share/zsh/site-functions $fpath)
+autoload -Uz compinit && compinit
