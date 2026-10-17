@@ -69,9 +69,12 @@ ln -sf "$HOME/.oh-my-custom-zsh/includes/ccstatusline/settings.json" "$HOME/.con
 # Create Claude config symbolic links
 print_log "Creating symbolic links for Claude config..."
 mkdir -p "$HOME/.claude"
-for f in CLAUDE.md settings.json; do
+for f in CLAUDE.md settings.json hooks; do
   rm -f "$HOME/.claude/$f"
-  ln -sf "$HOME/.oh-my-custom-zsh/includes/claude/$f" "$HOME/.claude/$f"
+  ln -sfn "$HOME/.oh-my-custom-zsh/includes/claude/$f" "$HOME/.claude/$f"
 done
+mkdir -p "$HOME/.local/bin"
+rm -f "$HOME/.local/bin/claude-restore"
+ln -sf "$HOME/.oh-my-custom-zsh/includes/claude/hooks/restore-sessions.sh" "$HOME/.local/bin/claude-restore"
 
 print_success "Symlinks created."

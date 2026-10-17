@@ -58,6 +58,16 @@ Homebrew's `php` formula is rolling: when a new minor ships (e.g. 8.6), `brew up
 3. Set `php = "8.6"` in `includes/mise/mise.toml`.
 4. Regenerate the Brewfile with `brew bundle dump --global --force --taps --brews --casks`.
 
+## Restore Claude Code sessions
+
+Reopens the Claude Code sessions left open by a closed terminal or a reboot, as new tabs of the current iTerm2 window (or a new one if none is open). A Claude Code hook (`includes/claude/hooks/`) tracks every session in `~/.claude/active-sessions/` and forgets it on a deliberate exit: `/exit`, `/quit`, `/clear`, Ctrl+D or Ctrl+C pressed twice. Closing the window keeps it.
+
+```bash
+claude-restore            # add --dry-run to print the commands only
+```
+
+Running sessions, missing directories and sessions without messages are skipped. To forget one by hand, delete its file from `~/.claude/active-sessions/`.
+
 ## Backups
 
 ### SSH keys
