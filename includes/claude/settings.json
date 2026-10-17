@@ -76,6 +76,15 @@
             "timeout": 5
           }
         ]
+      },
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/check-settings-symlink.sh"
+          }
+        ]
       }
     ],
     "SessionEnd": [
