@@ -66,7 +66,7 @@ Reopens the Claude Code sessions left open by a closed terminal or a reboot, as 
 claude-restore            # add --dry-run to print the commands only
 ```
 
-A terminal attached to a background session reattaches to it. Running sessions, missing directories and sessions without messages are skipped. To forget one by hand, delete its file from `~/.claude/active-sessions/`.
+A terminal attached to a background session reattaches to it. Running sessions are skipped, while missing directories and sessions without messages are forgotten. To forget one by hand, delete its file from `~/.claude/active-sessions/`.
 
 ## Backups
 

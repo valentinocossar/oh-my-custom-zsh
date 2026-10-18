@@ -28,6 +28,12 @@ has_messages() {
   grep -q '"type":"\(user\|assistant\)"' "$1"
 }
 
+forget() {
+  [[ "${dry_run:-}" == 1 ]] || rm -f "$1"
+}
+
+[[ "${1:-}" == "--dry-run" ]] && dry_run=1
+
 commands=()
 for f in "$HOME"/.claude/active-sessions/*.json; do
   [[ -e "$f" ]] || continue
@@ -44,9 +50,11 @@ for f in "$HOME"/.claude/active-sessions/*.json; do
     cwd=$(jq -r 'select(.cwd) | .cwd' "$target" | head -n 1)
   fi
   if [[ ! -d "$cwd" ]]; then
-    echo "Skip $id: $cwd no longer exists."
+    echo "Forget $id: $cwd no longer exists."
+    forget "$f"
   elif [[ ! -f "$transcript" ]] || ! has_messages "$transcript"; then
-    echo "Skip $id: never had a message, nothing to resume."
+    echo "Forget $id: never had a message, nothing to resume."
+    forget "$f"
   else
     commands+=("cd $(printf '%q' "$cwd") && claude --resume $id")
   fi
