@@ -22,7 +22,7 @@ eval "$(mise activate bash)"
 
 # Install Composer global packages
 print_step "Installing Composer global packages..."
-packages=("laravel/installer")
+packages=()
 for pkg in "${packages[@]}"; do
   if composer global show "$pkg" > /dev/null 2>&1; then
     print_log "$pkg already installed globally, skipping."

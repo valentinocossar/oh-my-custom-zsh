@@ -1,7 +1,6 @@
 tap "aovestdipaperino/tap", trusted: true
 tap "lerd-env/lerd", trusted: true
 tap "rhettbull/osxphotos", "https://github.com/RhetTbull/homebrew-osxphotos", trusted: true
-tap "shivammathur/php", trusted: true
 # Search tool like grep, but optimized for programmers
 brew "ack"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -80,10 +79,6 @@ brew "aovestdipaperino/tap/tokensave"
 brew "lerd-env/lerd/lerd"
 # Export photos from Apple Photos app and query the Photos database
 brew "rhettbull/osxphotos/osxphotos"
-# General-purpose scripting language
-brew "shivammathur/php/php", link: false
-# General-purpose scripting language
-brew "shivammathur/php/php@8.4"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
