@@ -39,6 +39,8 @@ brew "llmfit"
 brew "mas"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Deep clean and optimize your Mac
+brew "mole"
 # Open source relational database management system
 brew "mysql-client"
 # Port scanning utility for large networks
@@ -105,8 +107,6 @@ cask "lm-studio"
 cask "music-decoy"
 # PDF compression tool
 cask "pdf-squeezer"
-# Utility to uninstall apps and remove leftover files from old/uninstalled apps
-cask "pearcleaner"
 # VPN client focusing on security
 cask "protonvpn"
 # Imaging utility to install operating systems to a microSD card
