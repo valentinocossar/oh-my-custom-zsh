@@ -15,20 +15,47 @@ is_running() {
   return 1
 }
 
+# A terminal attached to a background session only logs a short id of it, e.g. "running in the background (d0ef73ab)"
+background_target() {
+  local short
+  short=$(jq -r 'select(.subtype == "local_command") | .content' "$1" 2>/dev/null \
+    | sed -n 's/.*running in the background (\([0-9a-f]\{8\}\)).*/\1/p' | tail -n 1)
+  [[ -n "$short" ]] || return 1
+  ls "$HOME"/.claude/projects/*/"$short"-*.jsonl 2>/dev/null | head -n 1
+}
+
+has_messages() {
+  grep -q '"type":"\(user\|assistant\)"' "$1"
+}
+
 commands=()
 for f in "$HOME"/.claude/active-sessions/*.json; do
   [[ -e "$f" ]] || continue
   IFS=$'\t' read -r id cwd transcript < <(jq -r '[.session_id, .cwd, .transcript_path] | @tsv' "$f")
   if is_running "$id"; then
     echo "Skip $id: already running."
-  elif [[ ! -d "$cwd" ]]; then
+    continue
+  fi
+  # The background session outlives the terminal, so reattach to it instead of reopening the empty view
+  if [[ -f "$transcript" ]] && target=$(background_target "$transcript"); then
+    echo "$id was attached to background session $(basename "$target" .jsonl)."
+    transcript=$target
+    id=$(basename "$target" .jsonl)
+    cwd=$(jq -r 'select(.cwd) | .cwd' "$target" | head -n 1)
+  fi
+  if [[ ! -d "$cwd" ]]; then
     echo "Skip $id: $cwd no longer exists."
-  elif [[ ! -f "$transcript" ]]; then
+  elif [[ ! -f "$transcript" ]] || ! has_messages "$transcript"; then
     echo "Skip $id: never had a message, nothing to resume."
   else
     commands+=("cd $(printf '%q' "$cwd") && claude --resume $id")
   fi
 done
+
+# Several closed terminals may have been attached to the same background session
+if (( ${#commands[@]} > 0 )); then
+  IFS=$'\n' read -r -d '' -a commands < <(printf '%s\n' "${commands[@]}" | awk '!seen[$0]++'; printf '\0')
+fi
 
 if (( ${#commands[@]} == 0 )); then
   echo "Nothing to restore."
