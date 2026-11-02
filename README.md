@@ -47,15 +47,7 @@ Taps, formulae, casks and Mac App Store apps are declared in `includes/homebrew/
 
 Runtimes and their versions are declared in `includes/mise/mise.toml` (symlinked and installed by `setup.sh`). Edit the file to add or bump a tool, then run `mise install`.
 
-To bump everything at once, run `mise run bump`, a wrapper for `mise upgrade --bump` that skips `php` (a `mise link` to the Homebrew keg, which must not be rebuilt from source) and `node` (pinned to a major, moved by hand to the next LTS).
-
-### Upgrading PHP to a new minor
-
-Homebrew's `php` formula is rolling and tracks the latest PHP. When a new minor ships (e.g. 8.6):
-
-1. Upgrade the formula: `brew upgrade php`.
-2. Repoint the mise link to it: `./scripts/setup_symlink_mise.sh` (run it from the repo root).
-3. Set `php = "8.6"` in `includes/mise/mise.toml`.
+To bump everything at once, run `mise run bump`, a wrapper for `mise upgrade --bump` that skips `node` (pinned to a major, moved by hand to the next LTS).
 
 ## Restore Claude Code sessions
 

@@ -21,7 +21,6 @@ print_step "Starting Oh My Custom Zsh setup..."
 ./scripts/install_homebrew_bundle.sh
 ./scripts/install_lerd_mono_watch.sh
 ./scripts/run_utiluti.sh
-./scripts/setup_symlink_mise.sh
 ./scripts/run_mise_install.sh
 ./scripts/install_composer_packages.sh
 ./scripts/install_claude_plugins.sh

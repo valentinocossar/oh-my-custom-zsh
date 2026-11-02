@@ -4,7 +4,6 @@ bun = "1.4"
 go = "1.27"
 node = "24"
 opentofu = "1.12"
-php = "8.5"
 pipx = "1.16"
 "pipx:poetry" = "2.4"
 python = "3.14"
@@ -25,5 +24,5 @@ trusted_config_paths = [
 COMPOSER_HOME = "{{ env.HOME }}/.composer"
 
 [tasks.bump]
-description = "Bump every tool except php (symlink to the Homebrew keg) and node (pinned to a major, bumped by hand to the next LTS)"
-run = "mise upgrade --bump --exclude php --exclude node"
+description = "Bump every tool except node (pinned to a major, bumped by hand to the next LTS)"
+run = "mise upgrade --bump --exclude node"

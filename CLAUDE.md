@@ -9,9 +9,7 @@ This file (repo-root `CLAUDE.md`) is project instructions for *this* repo only. 
 Two managers, split by how versions are handled:
 
 - **Homebrew**, declared in `includes/homebrew/Brewfile`. Use for tools where tracking the latest rolling release is fine: CLI utilities, GUI apps (casks), Mac App Store apps, and build/library dependencies. Do not pin versions here.
-- **Mise-en-place**, declared in `includes/mise/mise.toml`. Use for language runtimes and tooling that may need a specific version per project (node, python, go, php, opentofu, ansible, ...), even when the current pin is loose. Set an exact version when a project requires it; `latest` is fine otherwise (e.g. `uv`).
-
-When a tool is present in both (e.g. `php`), Homebrew covers the keg-only build/library side and Mise-en-place provides the runtime version that is active on `PATH` for development (`mise activate` in `.zshrc` runs after `brew shellenv` in `.zprofile`).
+- **Mise-en-place**, declared in `includes/mise/mise.toml`. Use for language runtimes and tooling that may need a specific version per project (node, python, go, opentofu, ansible, ...), even when the current pin is loose. Set an exact version when a project requires it; `latest` is fine otherwise (e.g. `uv`).
 
 ## Shell scripts
 

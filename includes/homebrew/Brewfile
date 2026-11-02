@@ -7,10 +7,6 @@ brew "ack"
 brew "bat"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
-# General-purpose scripting language
-brew "php", link: false
-# Dependency Manager for PHP
-brew "composer"
 # Top-like interface for container metrics
 brew "ctop"
 # Load/unload environment variables based on $PWD
