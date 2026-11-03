@@ -10,6 +10,7 @@ python = "3.14"
 uv = "latest"
 
 [settings]
+disable_tools = ["php"] # Avoid missing PHP warnings because Lerd provides PHP per site
 idiomatic_version_file_enable_tools = [
   "node",
   "python",
