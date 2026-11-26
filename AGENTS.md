@@ -1,8 +1,8 @@
-# CLAUDE.md
+# AGENTS.md
 
 ## Repo layout
 
-This file (repo-root `CLAUDE.md`) is project instructions for *this* repo only. The global Claude Code config lives in `includes/claude/` (`CLAUDE.md`, `settings.json`) and is symlinked into `~/.claude/` by `scripts/setup_symlinks.sh`. Do not confuse the two.
+This file (repo-root `AGENTS.md`) is project instructions for *this* repo only, read by every assistant; do not add a repo-root `CLAUDE.md`, since Claude Code skips `AGENTS.md` when one exists. The global Claude Code config lives in `includes/claude/` (`CLAUDE.md`, `settings.json`, `hooks/`) and is symlinked into `~/.claude/` by `scripts/setup_symlinks.sh`. Do not confuse the two.
 
 ## Package management
 
@@ -23,7 +23,7 @@ A script that depends on a tool the Brewfile step would have installed must guar
 
 Keep going when a step doesn't need my input. Put status notes in the same message as the next action.
 
-Stop only when blocked, or before an action that is destructive or hard to undo: deleting data, force-pushing or rewriting published history, changes outside the repo, anything that touches prod/production, and anything visible to others (commits, pushes, PRs and MRs, messages, comments). The global commit confirmation rule still applies.
+Stop only when blocked, or before an action that is destructive or hard to undo: deleting data, force-pushing or rewriting published history, changes outside the repo, anything that touches prod/production, and anything visible to others (commits, pushes, PRs and MRs, messages, comments). Git operations still require my confirmation, enforced by the global permission rules and hooks.
 
 Don't ask "should I continue?" and don't list options that don't block you.
 
