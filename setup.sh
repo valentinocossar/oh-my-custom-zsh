@@ -23,6 +23,7 @@ print_step "Starting Oh My Custom Zsh setup..."
 ./scripts/run_mise_install.sh
 ./scripts/install_composer_packages.sh
 ./scripts/install_claude_plugins.sh
+./scripts/install_claude_skills.sh
 ./scripts/set_macos_defaults.sh || true
 ./scripts/set_app_shortcuts.sh
 
